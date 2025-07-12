@@ -1,65 +1,79 @@
-# Analisis-Fraudes-Electronicos-Bancarios-2023al2024
-Fraudes electronicos bancarios años 2023 y 2024
-
 # 🔐 Análisis de Reclamos por Fraudes Electrónicos Bancarios
 
-Este proyecto analiza datos mensuales de reclamos únicos, montos involucrados y clientes afectados por fraudes electrónicos en la banca chilena durante los años 2023 y 2024. El objetivo principal es generar métricas ejecutivas y visualizaciones que permitan identificar tendencias, riesgos y oportunidades de mejora en la gestión financiera.
+Este proyecto analiza datos mensuales de reclamos únicos, montos involucrados y clientes afectados por fraudes electrónicos en distintos canales financieros. El objetivo es generar métricas ejecutivas y visualizaciones que revelen tendencias, riesgos y oportunidades para la banca chilena durante 2023 y 2024.
 
 ---
 
 ## 📌 Objetivos
 
-- Identificar estacionalidades en la ocurrencia de fraudes por canal financiero
-- Calcular indicadores clave: total de reclamos, montos involucrados, clientes afectados
-- Visualizar ratios como monto promedio por reclamo y reclamos por cliente
-- Proponer próximos pasos para modelado predictivo
+- Identificar estacionalidades y picos de riesgo
+- Calcular indicadores clave para visualización ejecutiva
+- Explorar ratios como monto promedio por reclamo y reclamos por cliente
+- Proponer próximos pasos hacia modelado predictivo
 
 ---
 
 ## 📊 Dataset
 
-Formato: Excel  
-Fuente: [Usuario privado]  
-Estructura: Reclamos únicos, montos y clientes por canal (tarjetas de crédito, débito, TPPF, transferencias, cajeros y otros)  
-Frecuencia: Mensual (24 períodos entre 2023–2024)
+- Formato: Excel
+- Estructura: Reclamos, montos y clientes por canal
+- Periodo: 24 meses (2023–2024)
+- Fuente: [Privada]
 
 ---
 
 ## ⚙️ Tecnologías
 
-- Python (pandas, seaborn, matplotlib)
+- Python: `pandas`, `matplotlib`, `seaborn`
 - Jupyter Notebook
-- GitHub para versionado y portafolio
+- GitHub para documentación y visibilidad
 
 ---
 
 ## 📈 Visualizaciones incluidas
 
-- Evolución mensual de reclamos totales (`evolucion_reclamos.png`)
-- Evolución mensual de montos reclamados (`monto_total.png`)
-- Evolución de clientes únicos (`clientes_unicos.png`)
-- Ratio de reclamos por cliente (`ratio_reclamos_cliente.png`)
-- Monto promedio por reclamo (`ratio_monto_promedio.png`)
+| Indicador                             | Archivo PNG                            |
+|--------------------------------------|----------------------------------------|
+| Evolución mensual de reclamos        | `output/graficos/evolucion_reclamos.png` |
+| Monto total reclamado                | `output/graficos/monto_total.png`        |
+| Clientes afectados mensualmente      | `output/graficos/clientes_unicos.png`    |
+| Monto promedio por reclamo           | `output/graficos/ratio_monto_promedio.png` |
+| Ratio de reclamos por cliente        | `output/graficos/ratio_reclamos_cliente.png` |
 
-Los puntos máximos están anotados automáticamente para facilitar el análisis ejecutivo.
+Cada gráfico incluye la anotación automática del punto más alto para facilitar el análisis gerencial.
 
 ---
 
-## 🧠 Conclusiones
+## 🧠 Conclusiones analíticas
 
-- 📈 Los reclamos muestran picos estacionales hacia fin de año, especialmente en octubre y diciembre
-- 💸 Transferencias electrónicas concentran el mayor monto de fraude por evento
-- 👥 Ratios mensuales revelan que ciertos períodos tienen alta severidad por cliente
-- ✅ La estructura permite escalar el análisis a modelos predictivos o dashboards interactivos
+- 📈 Octubre y diciembre muestran picos críticos de fraude, posibles meses de alta vulnerabilidad operativa
+- 💸 Las transferencias electrónicas concentran los montos más altos por evento
+- 👥 En 2024, los ratios superan el promedio histórico, revelando mayor severidad por cliente afectado
 
 ---
 
 ## 🚀 Próximos pasos
 
-- Modelado con XGBoost o Random Forest para predecir meses de mayor riesgo, permitiendo alertas tempranas o segmentación proactiva de clientes.
-- Visualización comparativa por canal mediante gráficos apilados, para dimensionar el impacto por tipo de transacción.
-- Integración con benchmarks bancarios, estadísticas regulatorias o datos externos para contextualizar la severidad del fraude.
-- Posibilidad de implementar detección de anomalías o clustering de meses atípicos mediante algoritmos no supervisados.
+- Modelado con XGBoost o Random Forest para predecir meses de mayor riesgo
+- Visualización comparativa por canal mediante gráficos apilados
+- Integración con benchmarks bancarios y datos regulatorios
+- Implementación de detección de anomalías y clustering de meses atípicos
+
+---
+
+## 📂 Estructura del proyecto
+
+```text
+fraudes-electronicos-bancarios/
+├── data/
+│   └── base_reclamos.xlsx
+├── notebooks/
+│   └── análisis_fraudes.ipynb
+├── output/
+│   └── graficos/
+│       └── *.png
+├── README.md
+├── requirements.txt
 
 
 ## 🧠 Autor
